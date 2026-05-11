@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Challenger 30K Store: landing minimalista para vender vapers online con catalogo visual y diseno premium."
+    />
+    <title>Challenger 30K Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/sections/inicio.css" />
+    <link rel="stylesheet" href="./css/sections/saludo.css" />
+    <link rel="stylesheet" href="./css/sections/contenido.css" />
+    <link rel="stylesheet" href="./css/sections/catalogo.css" />
+    <link rel="stylesheet" href="./css/sections/confianza.css" />
+    <link rel="stylesheet" href="./css/sections/footer.css" />
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container header-inner">
+          <a class="brand" href="#inicio" aria-label="Challenger 30K Store">Challenger 30K Store</a>
+          <nav class="site-nav" aria-label="Secciones principales">
+            <a href="#inicio">Inicio</a>
+            <a href="#saludo">Saludo</a>
+            <a href="#contenido">Contenido</a>
+            <a href="#catalogo">Catalogo</a>
+            <a href="#confianza">Confianza</a>
+            <a href="#footer">Footer</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero section" id="inicio">
+          <div class="container hero-grid">
+            <div class="hero-copy reveal">
+              <span class="eyebrow">Venta online de vapers premium</span>
+              <h1>Minimalismo, prescencia y catalogo visual para una tienda que convierte.</h1>
+              <p>
+                Una experiencia comercial limpia y directa para mostrar los productos, generar confianza y
+                llevar al usuario a la compra sin fricciones.
+              </p>
+              <div class="hero-actions">
+                <a class="button button--primary" href="#catalogo">Ver catalogo</a>
+                <a class="button button--ghost" href="#footer">Contactar</a>
+              </div>
+              <div class="hero-notes">
+                <span class="pill">Diseño minimalista</span>
+                <span class="pill">Vercel ready</span>
+                <span class="pill">HTML CSS JS</span>
+              </div>
+            </div>
+
+            <div class="hero-visual reveal">
+              <div class="hero-card">
+                <img
+                  src="./img/WhatsApp Image 2026-05-11 at 12.18.40 PM.jpeg"
+                  alt="Vaper Challenger 30K Sour Apple"
+                  class="hero-image"
+                />
+                <div class="hero-card-footer">
+                  <strong>Challenger 30K</strong>
+                  <span>Sour Apple</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--soft" id="saludo">
+          <div class="container intro-grid reveal">
+            <div>
+              <span class="eyebrow">Saludo</span>
+              <h2>Bienvenido a una tienda pensada para verse moderna y vender con claridad.</h2>
+            </div>
+            <p>
+              El objetivo de esta interfaz es mostrar cada producto con una jerarquia visual clara, una
+              estetica sobria y un recorrido corto desde la portada hasta el catalogo.
+            </p>
+          </div>
+        </section>
+
+        <section class="section" id="contenido">
+          <div class="container">
+            <div class="section-heading reveal">
+              <span class="eyebrow">Contenido</span>
+              <h2>Una arquitectura de venta simple, organizada y facilmente escalable.</h2>
+              <p>
+                Cada seccion cumple una funcion comercial precisa para reducir ruido, mejorar la lectura y
+                destacar el valor del catalogo.
+              </p>
+            </div>
+
+            <div class="content-grid">
+              <article class="info-card reveal">
+                <h3>Inicio impactante</h3>
+                <p>Hero limpio con propuesta de valor, CTA visible y un producto destacado como gancho visual.</p>
+              </article>
+              <article class="info-card reveal">
+                <h3>Catalogo legible</h3>
+                <p>Tarjetas de producto consistentes para comparar sabores, puffs y precio de manera rapida.</p>
+              </article>
+              <article class="info-card reveal">
+                <h3>Confianza comercial</h3>
+                <p>Bloque final con soporte, envio, garantia de proceso y recordatorio de venta responsable.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--catalog" id="catalogo">
+          <div class="container">
+            <div class="section-heading reveal">
+              <span class="eyebrow">Catalogo de productos</span>
+              <h2>Productos reales, presentados con una estetica premium y minimalista.</h2>
+              <p>El catalogo se genera desde JavaScript con datos centralizados para facilitar cambios futuros.</p>
+            </div>
+
+            <div class="catalog-grid" data-catalog-grid></div>
+          </div>
+        </section>
+
+        <section class="section" id="confianza">
+          <div class="container trust-grid">
+            <div class="section-heading reveal">
+              <span class="eyebrow">Confianza</span>
+              <h2>Una presentacion que reduce dudas y ayuda a convertir mejor.</h2>
+            </div>
+
+            <div class="trust-panels">
+              <article class="trust-panel reveal">
+                <h3>Compra clara</h3>
+                <p>CTA visibles, datos simples y una narrativa directa para evitar saturacion.</p>
+              </article>
+              <article class="trust-panel reveal">
+                <h3>Entrega y soporte</h3>
+                <p>Se deja preparada la zona de contacto para cerrar la operacion en el canal que el negocio use.</p>
+              </article>
+              <article class="trust-panel reveal">
+                <h3>Uso responsable</h3>
+                <p>Se incluye el aviso sobre nicotina para mantener la comunicacion comercial alineada con el producto.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer section" id="footer">
+        <div class="container footer-grid reveal">
+          <div>
+            <span class="eyebrow">Footer</span>
+            <h2>Challenger 30K Store</h2>
+            <p>Landing estatica lista para Vercel con estructura modular, catalogo visual y enfoque comercial.</p>
+          </div>
+
+          <div class="footer-meta">
+            <p>Venta para mayores de edad.</p>
+            <p>Producto con nicotina, sustancia altamente adictiva.</p>
+            <p>© <span data-year></span> Challenger 30K Store.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+.section--catalog::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 220px;
+  background: linear-gradient(180deg, rgba(122, 155, 89, 0.1), transparent);
+  pointer-events: none;
+}
+
+.catalog-grid {
+  position: relative;
+  z-index: 1;
+}
