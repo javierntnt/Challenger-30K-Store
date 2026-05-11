@@ -1,14 +1,13 @@
 import nodemailer from "nodemailer";
 
 export function parseSubscribePayload(payload) {
-  const name = String(payload?.name || "").trim();
   const email = String(payload?.email || "").trim();
 
-  if (!name || !email) {
-    return { ok: false, error: "Nombre y correo son obligatorios." };
+  if (!email) {
+    return { ok: false, error: "El correo es obligatorio." };
   }
 
-  return { ok: true, name, email };
+  return { ok: true, email };
 }
 
 function getTransporter(env = process.env) {
@@ -33,7 +32,7 @@ function getTransporter(env = process.env) {
   });
 }
 
-export async function sendWelcomeEmail({ name, email }, env = process.env) {
+export async function sendWelcomeEmail({ email }, env = process.env) {
   const transporter = getTransporter(env);
   const from = env.WELCOME_FROM || env.SMTP_USER;
   const subject = env.WELCOME_SUBJECT || "Bienvenido a Challenger 30K Store";
@@ -42,7 +41,7 @@ export async function sendWelcomeEmail({ name, email }, env = process.env) {
     from,
     to: email,
     subject,
-    text: `Hola ${name},\n\nGracias por suscribirte con el correo ${email}. Te damos la bienvenida a la comunidad de Challenger 30K Store.\n\nMuy pronto recibirás información sobre nuestros productos premium, nuevos sabores y promociones especiales.\n\nSaludos,\nChallenger 30K Store`,
+    text: `¡Hola!\n\nGracias por suscribirte con el correo ${email}. Te damos la bienvenida a la comunidad de Challenger 30K Store.\n\nMuy pronto recibirás información sobre nuestros productos premium, nuevos sabores y promociones especiales.\n\nSaludos,\nChallenger 30K Store`,
     html: `
       <div style="background-color: #f4f0e8; padding: 40px 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
         <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 24px; overflow: hidden; box-shadow: 0 12px 40px rgba(31, 35, 43, 0.15);">
@@ -58,7 +57,7 @@ export async function sendWelcomeEmail({ name, email }, env = process.env) {
           </div>
 
           <div style="padding: 40px 30px; color: #13161c;">
-            <h2 style="margin-top: 0; color: #13161c; font-size: 26px; font-weight: 700;">¡Hola, ${name}! 🎉</h2>
+            <h2 style="margin-top: 0; color: #13161c; font-size: 26px; font-weight: 700;">¡Hola! 🎉</h2>
             
             <p style="font-size: 17px; line-height: 1.8; color: #4a4f5a; margin-bottom: 25px;">
               Gracias por unirte a la exclusividad de <strong>Challenger 30K Store</strong>. Nos alegra tener tu correo (<em>${email}</em>) en nuestra lista VIP.

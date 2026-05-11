@@ -41,11 +41,10 @@ if (subscribeForm && subscribeStatus) {
     event.preventDefault();
 
     const formData = new FormData(subscribeForm);
-    const name = String(formData.get("name") || "").trim();
     const email = String(formData.get("email") || "").trim();
 
-    if (!name || !email) {
-      subscribeStatus.textContent = "Completa tu nombre y correo para continuar.";
+    if (!email) {
+      subscribeStatus.textContent = "Completa tu correo para continuar.";
       subscribeStatus.dataset.state = "error";
       return;
     }
@@ -60,7 +59,7 @@ if (subscribeForm && subscribeStatus) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, email }),
+        body: JSON.stringify({ email }),
       });
 
       const responseText = await response.text();
