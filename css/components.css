@@ -209,9 +209,106 @@
 .footer-grid {
   padding: 28px 0 0;
   border-top: 1px solid rgba(19, 22, 28, 0.1);
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.95fr);
+  align-items: start;
+}
+
+.footer-copy {
+  max-width: 40rem;
+}
+
+.subscription-card {
+  display: grid;
+  gap: 18px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.58);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow);
+}
+
+.subscription-card h3 {
+  margin: 10px 0 0;
+  font-size: 1.35rem;
+  line-height: 1.1;
+}
+
+.subscription-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.subscribe-form {
+  display: grid;
+  gap: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.field span {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.field input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 16px;
+  border: 1px solid rgba(19, 22, 28, 0.14);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--text);
+  font: inherit;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.field input::placeholder {
+  color: rgba(94, 100, 114, 0.72);
+}
+
+.field input:focus {
+  outline: none;
+  border-color: rgba(122, 155, 89, 0.72);
+  box-shadow: 0 0 0 4px rgba(122, 155, 89, 0.16);
+}
+
+.subscribe-form__submit {
+  width: 100%;
+}
+
+.subscribe-form__submit:disabled {
+  opacity: 0.72;
+  cursor: wait;
+}
+
+.subscribe-form__status {
+  min-height: 1.4em;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.subscribe-form__status[data-state="success"] {
+  color: var(--accent-strong);
+}
+
+.subscribe-form__status[data-state="error"] {
+  color: #a23a2b;
+}
+
+.subscribe-form__status[data-state="loading"] {
+  color: var(--muted);
 }
 
 .footer-meta {
+  grid-column: 1 / -1;
   display: grid;
   gap: 8px;
   align-content: start;
@@ -238,6 +335,14 @@
   .hero-visual {
     justify-self: start;
   }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-meta {
+    grid-column: auto;
+  }
 }
 
 @media (max-width: 640px) {
@@ -253,5 +358,9 @@
 
   .hero-card {
     padding: 14px;
+  }
+
+  .subscription-card {
+    padding: 22px;
   }
 }

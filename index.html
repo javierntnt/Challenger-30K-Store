@@ -36,6 +36,7 @@
             <a href="#contenido">Contenido</a>
             <a href="#catalogo">Catalogo</a>
             <a href="#confianza">Confianza</a>
+            <a href="#footer">Suscripcion</a>
             <a href="#footer">Footer</a>
           </nav>
         </div>
@@ -158,10 +159,43 @@
 
       <footer class="site-footer section" id="footer">
         <div class="container footer-grid reveal">
-          <div>
+          <div class="footer-copy">
             <span class="eyebrow">Footer</span>
             <h2>Challenger 30K Store</h2>
             <p>Landing estatica lista para Vercel con estructura modular, catalogo visual y enfoque comercial.</p>
+          </div>
+
+          <div class="subscription-card">
+            <span class="eyebrow">Suscripcion</span>
+            <h3>Recibe un correo de bienvenida al suscribirte.</h3>
+            <p>
+              Deja tu nombre y correo para unirte a la lista de novedades. Al enviar el formulario recibiras
+              un mensaje automatico de bienvenida.
+            </p>
+
+            <form class="subscribe-form" data-subscribe-form>
+              <label class="field">
+                <span>Nombre</span>
+                <input type="text" name="name" autocomplete="given-name" placeholder="Tu nombre" required />
+              </label>
+
+              <label class="field">
+                <span>Correo electronico</span>
+                <input
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                  placeholder="tu@correo.com"
+                  required
+                />
+              </label>
+
+              <button class="button button--primary subscribe-form__submit" type="submit">
+                Suscribirme
+              </button>
+
+              <p class="subscribe-form__status" data-subscribe-status aria-live="polite"></p>
+            </form>
           </div>
 
           <div class="footer-meta">

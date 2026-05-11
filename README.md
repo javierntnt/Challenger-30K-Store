@@ -130,6 +130,14 @@ npm install
 npm run dev
 ```
 
+Para probar el formulario de suscripcion con envio real de correo, usa Vercel localmente con:
+
+```bash
+vercel dev
+```
+
+El archivo `.env.local` debe contener las credenciales SMTP del remitente y la contraseña de aplicacion.
+
 Para generar la version de produccion:
 
 ```bash
